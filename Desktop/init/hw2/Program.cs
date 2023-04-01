@@ -23,23 +23,26 @@ else {
 645 -> 5
 78 -> третьей цифры нет
 32679 -> 6
-*/
 
-Console.Write("Введите число ");
+
+Console.Write("Введите число: ");
 int a = int.Parse(Console.ReadLine());
-
-while  ( a >= 100 )  {
-   int b = a/10;
-   Console.WriteLine(b);
+while (a > 999)
+{
+    a = a / 10;
 }
- if (a > 999|a <= 99){
-    Console.WriteLine("Третей цифры нет ");
- }
-   
+if (a <= 999)
+{
+    int b = a % 10;
+    Console.WriteLine($"третяя цифра: {b}");
+}
+else
+{
+    Console.WriteLine("Третей цифры нет!");
+}
 
 
 
-/*
 Задача 15: Напишите программу, 
 которая принимает на вход цифру, 
 обозначающую день недели, и проверяет, 
